@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= content_for?(:title) ? "Administrador Korewa - " + yield(:title) : "Administrador Korewa" %></title>
+<%= stylesheet_link_tag "admin"%>
+<%= javascript_include_tag :defaults %>
+<script>
+jQuery.noConflict();
+</script>
+<%= javascript_include_tag "menuadmin.js" %>
+<%=yield :head%>
+</head>
+<body>
+	<div id="General">
+		<div id="Header">
+			<div id="User_bar">
+				<div id="User_bar_content">
+					<div id="User_name">
+						<%= link_to image_tag("img_house.png", :width=>"28", :height=>"23", :class=>"Usr_bt_align"), root_path%><span>Bem Vindo, <%= current_user.name %></span>
+					</div>
+					<div id="Buttons">
+						<%= link_to(image_tag("bt_config.png", :width=>"22", :height=>"22") , edit_user_path(:current), :class => "Usr_bt_align") %>
+						<%= link_to(image_tag("bt_ajuda.png", :width=>"22", :height=>"22") , "", :class => "Usr_bt_align") %>
+						<%= link_to(image_tag("bt_logout.png", :width=>"22", :height=>"22") , logout_path, :class => "Usr_bt_align") %>
+					</div>
+				</div>
+			</div>
+			<div id="Logo">
+				<%= image_tag("logo_default.png", :width=>"148", :height=>"83")%>
+			</div>
+		</div>
+		<div id="Content">
+			<div id="Left_box">
+				<div id="Item_category" >
+					<h3>Conteúdo</h3><br />
+					<!-- 
+					<div class="Tab_menu_left">
+						<%= link_to image_tag("img_line_up.png", :width=>"220", :height=>"10"),"#"%>
+					</div>
+					-->
+					<div id="Item_content">
+						<ul class="Sub_ul">
+							<li><%= link_to "Gerenciar Usuários",admin_users_path%></li>
+							<!-- 
+							<ul>
+								<li>subcontent</li>
+							</ul>
+							<li><a href="#">Artigos</a></li>
+							<li><a href="#">Downloads</a></li>
+							<li><a href="#">Produtos</a></li>
+							<li><a href="#">Fotos</a></li>
+							<li><a href="#">Seção</a></li> 
+							-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="Right_box">
+				<%=yield%>
+			</div>    
+			<div class="clear"></div>
+			<div id="Footer">
+				<div id="Footer_content">
+					<p>Kore.Wa CMS © 2011 - all rights reserved.</p> 
+					<ul>
+						<li><a href="#">Politica de privacidade&nbsp;</a>•&nbsp;</li>
+						<li><a href="#">Termos de Uso&nbsp;</a>•&nbsp;</li>
+						<li><a href="#">Ajuda&nbsp;</a>•&nbsp;</li>
+						<li><a href="#">Suporte </a></li>
+					</ul>
+					<br />
+					<%= link_to(image_tag("logo_korewa.png",:width=>"130",:height=>"54",:alt=>"korewa",:title=>"korewa",:style=>" display:block; float:right; margin-top:70px;"),'http://www.korewa.com.br/')%>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
