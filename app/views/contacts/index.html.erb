@@ -27,48 +27,57 @@ jQuery.noConflict();
 		{
 			jQuery('input[name="contact[phone]"]').setMask('(99)9999-9999');		
 		}
-		jQuery(document).ready(function(){
-    	jQuery('#new_contact').validate({
-        rules: {
-            "contact[name]": {
-                required: true,
-                minlength: 2,
-				diferenteDe: "Preencha seu nome"
-            },
-			"contact[phone]": {
-                required: true,
-                minlength: 13,
-				diferenteDe: "Preencha seu telefone"
-            },
-			"contact[email]": {
-                required: true,
-                email: true
-            },
-			"contact[message]":{
-				required:true,
-				diferenteDe: "Preencha sua mensagem"
+		
+		function valida(){
+			jQuery("#Box_registration").hide();
+			jQuery("#imgload").show();
+			if (jQuery("#new_contact").validate({
+		        rules: {
+		            "contact[name]": {
+		                required: true,
+		                minlength: 2,
+						diferenteDe: "Preencha seu nome"
+		            },
+					"contact[phone]": {
+		                required: true,
+		                minlength: 13,
+						diferenteDe: "Preencha seu telefone"
+		            },
+					"contact[email]": {
+		                required: true,
+		                email: true
+		            },
+					"contact[message]":{
+						required:true,
+						diferenteDe: "Preencha sua mensagem"
+					}
+
+		        },
+		        messages: {
+		            "contact[name]":{
+						required: "*",
+						minlength: 	"*"
+					},
+					"contact[phone]":{
+						required: "*",
+						minlength: 	"*"
+					},
+					"contact[email]":{
+						required: "*",
+						email: "*"	
+					},
+					"contact[message]":{
+						required: "*"	
+					}
+		        }
+		    }).form()){
+				jQuery("#new_contact").submit();
+			}else{
+				jQuery("#imgload").hide();
+				jQuery("#Box_registration").show();
 			}
-			
-        },
-        messages: {
-            "contact[name]":{
-				required: "*",
-				minlength: 	"*"
-			},
-			"contact[phone]":{
-				required: "*",
-				minlength: 	"*"
-			},
-			"contact[email]":{
-				required: "*",
-				email: "*"	
-			},
-			"contact[message]":{
-				required: "*"	
-			}
-        }
-    });
-});
+		}
+
 </script>
 </head>
 <body>
@@ -125,9 +134,13 @@ jQuery.noConflict();
 					<%= f.text_area :message, :value => "Preencha sua mensagem", :onfocus => "javascript:check_text_onfocus(this)", :onblur => "javascript:check_text_onblur(this)" %>
 				</div>
 	            <br />
-					<%= image_submit_tag("bt_enviar.png", :width=>"344", :height=>"57", :class=>"bt_enviar_align")%>
+					<%= image_tag("bt_enviar.png", :width=>"344", :height=>"57", :class=>"bt_enviar_align", :onclick=>'valida()')%>
 	            <!-- <a href="#"><img src="images/bt_enviar.png" width="344" height="57" class="bt_enviar_align" /></a>-->
-            </div>                                      
+            </div>  
+			<%= image_tag("loading.gif", :id=>'imgload')%>
+			<script>
+				jQuery("#imgload").hide();
+			</script>
         <% end %>
 
         </div>

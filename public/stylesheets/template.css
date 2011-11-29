@@ -198,15 +198,20 @@ a:hover, a:active, a:focus
 {
 	position:relative;
 	float:right;
-	width:370px;
+	width:391px;
 	height:947px;
+}
+#Box_registration
+{
+	margin-left:21px;
+	height: 410px;
 }
 .Title_h2
 {
 	font-family:novecento-bold-webfont;
 	font-size:20.03px;
 	color:#f2f2f2;
-	margin-left:10px;
+	margin-left:31px;
 	margin-top:355px;
 	margin-bottom:33px;
 }
@@ -271,7 +276,9 @@ a:hover, a:active, a:focus
 	color: white;
 	font-family: novecento-light-webfont;
 	font-size: 14px;
-	font-weight: lighter;	
+	font-weight: bold;
+	margin-left: -21px;
+	width: 381px;	
 }
 #Footer
 {
@@ -313,3 +320,11 @@ input.error
 	border:1px solid red;
 }
 */
+#imgload
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -16px;
+	margin-top: -16px;	
+}
