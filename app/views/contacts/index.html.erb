@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sato7</title>
+<%= stylesheet_link_tag "template"%>
+<%= javascript_include_tag :defaults %>
+
+<script>
+jQuery.noConflict();
+</script>
+<%=javascript_include_tag "jquery.validate.min.js"%>
+<%=javascript_include_tag "meusmetodos.js"%>
+<%=javascript_include_tag "jquery.meio.mask.js"%>
+<script>
+		function check_text_onfocus(obj)
+		{
+		    if(obj.value == obj.defaultValue)
+		        obj.value = '';
+		}
+		function check_text_onblur(obj)
+		{
+		    if(obj.value=='')
+		        obj.value = obj.defaultValue;
+		}
+		function insertingmask()
+		{
+			jQuery('input[name="contact[phone]"]').setMask('(99)9999-9999');		
+		}
+		jQuery(document).ready(function(){
+    	jQuery('#new_contact').validate({
+        rules: {
+            "contact[name]": {
+                required: true,
+                minlength: 2,
+				diferenteDe: "Preencha seu nome"
+            },
+			"contact[phone]": {
+                required: true,
+                minlength: 13,
+				diferenteDe: "Preencha seu telefone"
+            },
+			"contact[email]": {
+                required: true,
+                email: true
+            },
+			"contact[message]":{
+				required:true,
+				diferenteDe: "Preencha sua mensagem"
+			}
+			
+        },
+        messages: {
+            "contact[name]":{
+				required: "*",
+				minlength: 	"*"
+			},
+			"contact[phone]":{
+				required: "*",
+				minlength: 	"*"
+			},
+			"contact[email]":{
+				required: "*",
+				email: "*"	
+			},
+			"contact[message]":{
+				required: "*"	
+			}
+        }
+    });
+});
+</script>
+</head>
+<body>
+<div class="Bg_container">
+    <div class="Container">
+		<div id="Box_left">
+        	<div id="Logo">
+				<%= image_tag("Logo_sato7.png", :width=>"362", :height=>"126", :class=>"Logo_sato7")%>
+			</div>
+            <div class="Phrase_box">
+               <!--  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a lorem est. Duis ac tellus at augue dapibus sagittis.</p>-->
+            </div>            
+          <div class="Clients_box">
+       	    <h1 class="Title_h1">NOSSOS CLIENTES</h1>
+            <ul>
+            	<li>
+					<%= image_tag("img_logo_unilever.jpg", :width=>"79", :height=>"90", :class=>"img_unilever")%>
+					<%= image_tag("img_logo_castelato.jpg", :width=>"160", :height=>"47", :class=>"img_castelato")%>
+					<%= image_tag("img_logo_tegula.jpg", :width=>"143", :height=>"73", :class=>"img_tegula")%>
+                </li>
+            </ul>
+   			<ul>
+            	<li>
+					<%= image_tag("img_logo_top_beauty.jpg", :width=>"75", :height=>"108", :class=>"img_top_beauty")%>
+					<%= image_tag("img_logo_adriane_galisteu.jpg", :width=>"184", :height=>"41", :class=>"img_adriane_galisteu")%>
+					<%= image_tag("img_festa_das_flores.jpg", :width=>"156", :height=>"57", :class=>"img_festa_das_flores")%>	                           
+                </li>
+            </ul>            
+            
+   			<ul>
+            	<li>
+					<%= image_tag("img_logo_ceac.jpg", :width=>"140", :height=>"54", :class=>"img_ceac")%>
+					<%= image_tag("img_logo_rota_das_bandeiras.jpg", :width=>"146", :height=>"84", :class=>"img_logo_rota_das_bandeiras")%>
+					<%= image_tag("img_logo_nautilus.jpg", :width=>"147", :height=>"62", :class=>"img_logo_nautilus")%>	
+                </li>
+            </ul>               
+
+            </div>
+        </div>
+        <div id="Box_right">
+		<%= form_for @contact, :remote => true, :id => "new_contact" do |f| %>
+        	<h2 class="Title_h2">CONTATO</h2>
+			<div id="Box_registration">
+	            <div class="Input_small">
+					<%= f.text_field :name, :value => "Preencha seu nome", :onfocus => "javascript:check_text_onfocus(this)", :onblur => "javascript:check_text_onblur(this)" %>
+	            </div>
+	            <div class="Input_small">
+					<%= f.text_field :phone, :value => "Preencha seu telefone", :onfocus => "check_text_onfocus(this); insertingmask();", :onblur => "javascript:check_text_onblur(this)" %>
+	            </div>
+	            <div class="Input_small">
+					<%= f.text_field :email, :value => "Preencha seu e-mail", :onfocus => "javascript:check_text_onfocus(this)", :onblur => "javascript:check_text_onblur(this)" %>
+	            </div>
+				<div class="Input_big">
+					<%= f.text_area :message, :value => "Preencha sua mensagem", :onfocus => "javascript:check_text_onfocus(this)", :onblur => "javascript:check_text_onblur(this)" %>
+				</div>
+	            <br />
+					<%= image_submit_tag("bt_enviar.png", :width=>"344", :height=>"57", :class=>"bt_enviar_align")%>
+	            <!-- <a href="#"><img src="images/bt_enviar.png" width="344" height="57" class="bt_enviar_align" /></a>-->
+            </div>                                      
+        <% end %>
+
+        </div>
+        <div class="clear"></div>
+          <div id="Footer">
+            <p class="Footer_text">
+				<%= image_tag("img_detail_footer.jpg", :width=>"10", :height=>"16", :class=>"footer_img")%>
+				R. João Pires, 649 - Sala 7 - Centro - Atibaia - SP<br />
+             	11 2427 - 8879
+			</p>
+          </div>   
+  </div><!-- end .Container -->    
+</div><!-- end .Bg_container --> 
+</body>
+</html>

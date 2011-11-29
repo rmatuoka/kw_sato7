@@ -1,0 +1,24 @@
+<% title "Admin/Contact" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @contact.phone %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+<p>
+  <strong>Message:</strong>
+  <%= @contact.message %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_contact_path(@contact) %> |
+  <%= link_to "Destroy", [:admin, @contact], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_contacts_path %>
+</p>

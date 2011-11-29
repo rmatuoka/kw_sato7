@@ -1,0 +1,315 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'novecento-light-webfont';
+    src: url('novecento-light-webfont.eot');
+    src: url('novecento-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('novecento-light-webfont.woff') format('woff'),
+         url('novecento-light-webfont.ttf') format('truetype'),
+         url('novecento-light-webfont.svg#TheSansCorrespeBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'novecento-bold-webfont';
+    src: url('novecento-bold-webfont.eot');
+    src: url('novecento-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('novecento-bold-webfont.woff') format('woff'),
+         url('novecento-bold-webfont.ttf') format('truetype'),
+         url('novecento-bold-webfont.svg#TheSansCorrespeBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	background: #000;
+	margin: 0;
+	padding: 0;
+	overflow-x:none;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl, p
+ { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6
+{
+	margin-top: 0;
+	font-weight:normal !important;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+/* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img 
+{ /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link 
+{
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited 
+{
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus
+{ /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.Bg_container
+{
+	position:relative;
+	background-image:url(../images/bg_splash.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;	
+	min-width:1000px;
+	height:auto;
+	
+}
+.Container
+{	
+	width: 100%;
+	max-width: 1000px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 1000px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	height:auto;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.Content ul, .Content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+#Box_left
+{
+	position:absolute;
+	float:left;
+	width:610px;
+	height:1000px;
+}
+	#Logo
+	{
+		position:relative;
+		width:610px;
+		height:377px;
+	}
+	.Logo_sato7
+	{
+		position:relative;
+		top:52px;
+		left:23px;
+	}
+	.Phrase_box
+	{
+		position:relative;
+		font-family:novecento-bold-webfont;
+		font-size:12px;
+		color:#f2f2f2;
+		width:593px;
+		height:40px;
+		padding-top:16px;
+		padding-left:17px;
+	}
+	.Clients_box
+	{
+		position:relative;
+		width:610px;
+		height:455px;		
+	}
+	.Title_h1
+	{
+		font-family:novecento-bold-webfont;
+		font-size:15px;
+		color:#f2f2f2;
+		margin-left:24px;
+		margin-top:39px;
+		margin-bottom:69px;
+	}
+	.img_unilever
+	{
+		position:relative;
+		top:0px;
+		left:55px !important;
+	}
+	.img_castelato
+	{
+		position:relative;
+		top:-22px;
+		left:105px !important;
+	}
+	.img_tegula
+	{
+		position:relative;
+		top:-10px;
+		left:165px !important;
+	}
+	.img_top_beauty
+	{
+		position:relative;
+		top:0px;
+		left:58px !important;
+	}	
+	.img_adriane_galisteu
+	{
+		position:relative;
+		top:-44px;
+		left:100px !important;
+	}
+	
+	.img_festa_das_flores
+	{
+		position:relative;
+		top:-19px;
+		left:145px !important;
+	}
+	.img_ceac
+	{
+		position:relative;
+		top:0px;
+		left:30px !important;
+	}
+
+	.img_logo_rota_das_bandeiras
+	{
+		position:relative;
+		top:10px;
+		left:60px !important;
+	}
+	.img_logo_nautilus
+	{
+		position:relative;
+		top:-5px;
+		left:110px !important;
+	}
+						
+#Box_right
+{
+	position:relative;
+	float:right;
+	width:370px;
+	height:947px;
+}
+.Title_h2
+{
+	font-family:novecento-bold-webfont;
+	font-size:20.03px;
+	color:#f2f2f2;
+	margin-left:10px;
+	margin-top:355px;
+	margin-bottom:33px;
+}
+.Input_small
+{
+
+	background-color:#151515;
+	position:relative;
+	width:339px;
+	height:40px;
+	margin-top:10px;
+}
+.Input_small input
+{
+		font-family:novecento-light-webfont;
+		font-size:14px;
+		font-weight:lighter;
+		color:#6d6d6d;
+		background:none;
+		border:none;
+		width:300px;
+		margin-top:12px;
+		margin-left:13px;
+}
+
+.Input_big
+{
+	color:#6d6d6d;	
+	background-color:#151515;
+	position:relative;
+	width:326px;
+	height:151px;	
+	border:none;
+	margin-top:10px;
+	padding:10px 0px 0px 13px;
+}
+.Input_big textarea
+{
+	font-family:novecento-light-webfont;
+	font-size:14px;
+	font-weight:lighter;
+	color:#6d6d6d;	
+	background-color:#151515;
+	width:300px;
+	height:131px;	
+	border:none;
+}
+.Input_big label
+{
+	top: 40%;
+	position: absolute;
+}
+.bt_enviar_align
+{
+	position:relative;
+	left:0px;
+	top:10px;
+}
+#Box_success
+{
+	text-align: center;
+	color: white;
+	font-family: novecento-light-webfont;
+	font-size: 14px;
+	font-weight: lighter;	
+}
+#Footer
+{
+	position:absolute;
+	width:1000px;
+	height:70px;
+	text-align:right;
+	
+}
+.Footer_text
+{
+		font-family:novecento-bold-webfont;
+		font-size:13.77px;
+		color:#6d6d6d;
+}
+.footer_img
+{
+	position:relative;
+	top: 4px !important;
+	margin-right:10px;
+
+}
+.clear
+{ /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+}
+
+label.error
+{
+	margin-left:5px;
+	color:red;
+}
+/*
+textarea.error{
+	border:1px solid red;	
+}
+input.error
+{
+	border:1px solid red;
+}
+*/

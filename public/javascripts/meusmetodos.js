@@ -151,7 +151,7 @@ jQuery.validator.addMethod("notEqual", function(value, element, param) {
 
 jQuery.validator.addMethod("diferenteDe", function(value, element, strCompara) {
    return value == strCompara ? false : true;
-}, "Este valor não foi alterado"); // Mensagem padrão 
+}, "*"); // Mensagem padrão 
 
 jQuery.validator.addMethod("maiorQue", function(value, element, param) {
    return value <= jQuery(param).val() ? false : true;
