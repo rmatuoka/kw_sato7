@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  before_filter :navegadorie6  
   layout "blank" 
   def index
     @contact = Contact.new
