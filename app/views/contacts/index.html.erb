@@ -130,11 +130,12 @@ jQuery.noConflict();
 	            <div class="Input_small">
 					<%= f.text_field :email, :value => "Preencha seu e-mail", :onfocus => "javascript:check_text_onfocus(this)", :onblur => "javascript:check_text_onblur(this)" %>
 	            </div>
-				<div class="Input_big">
+				<div class="Input_big" >
 					<%= f.text_area :message, :value => "Preencha sua mensagem", :onfocus => "javascript:check_text_onfocus(this)", :onblur => "javascript:check_text_onblur(this)" %>
 				</div>
-	            <br />
-					<%= image_tag("bt_enviar.png", :width=>"344", :height=>"57", :class=>"bt_enviar_align", :onclick=>'valida()')%>
+				<br />            
+					<%= submit_tag "",:type=>"button",:class=>"Enviar",:onclick=>'valida()'%>
+					
 	            <!-- <a href="#"><img src="images/bt_enviar.png" width="344" height="57" class="bt_enviar_align" /></a>-->
             </div>  
 			<%= image_tag("loading.gif", :id=>'imgload')%>

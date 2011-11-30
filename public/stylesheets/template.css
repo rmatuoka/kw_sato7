@@ -158,20 +158,20 @@ a:hover, a:active, a:focus
 	.img_top_beauty
 	{
 		position:relative;
-		top:0px;
+		top:15px;
 		left:58px !important;
 	}	
 	.img_adriane_galisteu
 	{
 		position:relative;
-		top:-44px;
+		top:-30px;
 		left:100px !important;
 	}
 	
 	.img_festa_das_flores
 	{
 		position:relative;
-		top:-19px;
+		top:-5px;
 		left:145px !important;
 	}
 	.img_ceac
@@ -203,7 +203,7 @@ a:hover, a:active, a:focus
 }
 #Box_registration
 {
-	margin-left:21px;
+	margin-left:26px;
 	height: 410px;
 }
 .Title_h2
@@ -220,7 +220,7 @@ a:hover, a:active, a:focus
 
 	background-color:#151515;
 	position:relative;
-	width:339px;
+	width:330px;
 	height:40px;
 	margin-top:10px;
 }
@@ -232,7 +232,7 @@ a:hover, a:active, a:focus
 		color:#6d6d6d;
 		background:none;
 		border:none;
-		width:300px;
+		width:302px;
 		margin-top:12px;
 		margin-left:13px;
 }
@@ -242,22 +242,26 @@ a:hover, a:active, a:focus
 	color:#6d6d6d;	
 	background-color:#151515;
 	position:relative;
-	width:326px;
-	height:151px;	
+	width:330px;	
 	border:none;
 	margin-top:10px;
-	padding:10px 0px 0px 13px;
 }
-.Input_big textarea
+textarea
 {
 	font-family:novecento-light-webfont;
 	font-size:14px;
 	font-weight:lighter;
 	color:#6d6d6d;	
 	background-color:#151515;
-	width:300px;
-	height:131px;	
+	width:317px;
+	height:119px;	
 	border:none;
+	padding:12px 0px 0px 13px;
+	margin-bottom:10px;
+}
+.Input_big label.error
+{
+	margin-left:-24px !important;
 }
 .Input_big label
 {
@@ -269,6 +273,30 @@ a:hover, a:active, a:focus
 	position:relative;
 	left:0px;
 	top:10px;
+}
+.Enviar
+{
+	background:none;
+	background-image:url(../images/bt_enviar.png);
+	background-repeat:no-repeat;
+	background-position:left;
+	width:330px;
+	height:57px;
+	border:none;
+	cursor:pointer;
+
+}
+
+.Enviar:active
+{
+	background:none;
+	background-image:url(../images/bt_enviar_active.png);
+	background-repeat:no-repeat;
+	background-position:left;
+	width:330px;
+	height:57px;
+	border:none;
+	cursor:pointer;
 }
 #Box_success
 {
@@ -293,6 +321,7 @@ a:hover, a:active, a:focus
 		font-family:novecento-bold-webfont;
 		font-size:13.77px;
 		color:#6d6d6d;
+		margin-right:28px;
 }
 .footer_img
 {
@@ -308,7 +337,7 @@ a:hover, a:active, a:focus
 
 label.error
 {
-	margin-left:5px;
+	margin-left:-10px;
 	color:red;
 }
 /*
