@@ -258,7 +258,7 @@ textarea
 	border:none;
 	padding:12px 0px 0px 13px;
 	margin-bottom:10px;
-	resize: none;
+	resize: none;	
 }
 .Input_big label.error
 {
@@ -280,20 +280,30 @@ textarea
 	background:none;
 	background-image:url(../images/bt_enviar.png);
 	background-repeat:no-repeat;
-	background-position:left;
+	background-position:-20px -38px;
 	width:330px;
 	height:57px;
 	border:none;
 	cursor:pointer;
+	
 
+}
+.Enviar:hover
+{
+	background-image:url(../images/bt_enviar.png);
+	background-repeat:no-repeat;
+	background-position:-20px -139px;
+	width:330px;
+	height:57px;
+	border:none;
+	cursor:pointer;
 }
 
 .Enviar:active
 {
-	background:none;
-	background-image:url(../images/bt_enviar_active.png);
+	background-image:url(../images/bt_enviar.png);
 	background-repeat:no-repeat;
-	background-position:left;
+	background-position:-20px -139px;
 	width:330px;
 	height:57px;
 	border:none;
