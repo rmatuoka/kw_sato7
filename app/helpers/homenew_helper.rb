@@ -1,0 +1,2 @@
+module HomenewHelper
+end

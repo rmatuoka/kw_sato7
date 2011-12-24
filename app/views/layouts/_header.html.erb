@@ -1,0 +1,27 @@
+<div id='logo'>
+	<a href="javascript: void(0)" onClick="$('html,body').animate({scrollTop: $('#home').offset().top}, 500);"><img src="/images/logo.png" width="499" height="53" /></a>
+</div>
+<div id='redes'>
+	<a href="javascript: void(0)"><img src="/images/icon_face.jpg" width="30" height="30" /></a>
+    <a href="javascript: void(0)"><img src="/images/icon_twitter.jpg" width="30" height="30" /></a>
+</div>
+<div id='menu'>
+	<ul id='ulmenu'>
+		<%if @menu == true%>
+			<li><a class="home" href="javascript: void(0)">HOME</a></li>
+	        <li><a class="agencia" href="javascript: void(0)">AGÊNCIA</a></li>
+	        <li><a class="servicos" href="javascript: void(0)">SERVIÇOS</a></li>
+	        <li><a class="clientes" href="javascript: void(0)">CLIENTES</a></li>
+	        <li><a class="portifolio" href="javascript: void(0)">PORTFÓLIO</a></li>
+	        <li><a class="contato" href="javascript: void(0)">CONTATO</a></li>
+		<%else%>
+			<li><a class="home" href="/?anchor=home">HOME</a></li>
+            <li><a class="agencia" href="/?anchor=agencia">AGÊNCIA</a></li>
+            <li><a class="servicos" href="/?anchor=servicos">SERVIÇOS</a></li>
+            <li><a class="clientes" href="/?anchor=clientes">CLIENTES</a></li>
+            <li><a class="portifolio" href="/?anchor=portifolio">PORTFÓLIO</a></li>
+            <li><a class="contato" href="/?anchor=contato">CONTATO</a></li>
+		<%end%>
+    	
+    </ul>   
+</div>

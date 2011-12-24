@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'AvantGardeBkBTBook';
+    src: url('../fonts/avant_garde_book_bt-webfont.eot');
+    src: url('../fonts/avant_garde_book_bt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avant_garde_book_bt-webfont.woff') format('woff'),
+         url('../fonts/avant_garde_book_bt-webfont.ttf') format('truetype'),
+         url('../fonts/avant_garde_book_bt-webfont.svg#AvantGardeBkBTBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NovecentoBold';
+    src: url('../fonts/novecento-bold-webfont.eot');
+    src: url('../fonts/novecento-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/novecento-bold-webfont.woff') format('woff'),
+         url('../fonts/novecento-bold-webfont.ttf') format('truetype'),
+         url('../fonts/novecento-bold-webfont.svg#NovecentoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NovecentoLight';
+    src: url('../fonts/novecento-light-webfont.eot');
+    src: url('../fonts/novecento-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/novecento-light-webfont.woff') format('woff'),
+         url('../fonts/novecento-light-webfont.ttf') format('truetype'),
+         url('../fonts/novecento-light-webfont.svg#NovecentoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.selecionado{
+	color:#000 !important;
+	}
+	
+section{
+	position:relative;
+	font-family:Verdana, Geneva, sans-serif;
+	}
+
+header{
+	border-top:10px solid red;
+	position:fixed;
+	width:100%;
+	height:150px;
+	padding-left:20%;
+	z-index:10000;
+	}
+
+#logo{
+	margin-top:50px;
+	}
+
+#redes{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:150px;
+	height:82px;
+	background-image:url(../images/bg_redes.png) !important;
+	background-repeat:no-repeat;
+	background-position:top right;
+	z-index:100000;
+	}
+
+#redes img{
+	float:right;
+	margin:5px;
+	}
+
+#menu{
+	background-image:url(../images/bg_menu.png) !important;
+	background-repeat:no-repeat;
+	background-position:top left;
+	width:100%;
+	height:46px;
+	margin-left:212px;
+	margin-top:0px;
+	}
+
+#menu ul{
+	padding-top:10px;
+	margin-left:50px;
+	}
+
+#menu ul li{
+	display:inline;
+	margin-right:30px;
+	}
+
+#menu ul li a{
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+
+#menu ul li a:hover{
+	color:#000000;
+	text-decoration:none;
+	}
+
+#home{
+	background-image:url(../images/bg_home_castelatto.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:100%;
+	height:881px;
+	overflow:hidden !important;
+	}
+	
+#conteudo_home{
+	margin:0 auto;
+	width:965px;
+	overflow:hidden !important;
+	}
+
+#conteudo_home img{
+	margin-top:400px;
+	}
+
+.bg1{
+	position:absolute;
+	top:0px;
+	left:0px;
+	}
+	
+#agencia{
+	background-image:url(../images/bg_agencia.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:100%;
+	height:901px;
+	overflow:hidden;
+	}
+
+.img_sabe{
+	float:left;
+	margin-left:10%;
+	margin-top:250px;
+	}
+
+#txt_agencia{
+	margin:0 auto;
+	margin-top:50px;
+	margin-left:100px;
+	overflow:hidden;
+	}
+	
+#txt_agencia h3{
+	color:#c80006;
+	font-size:23px;
+	}
+
+#txt_agencia p{
+	color:#909296;
+	font-size:18px;
+	margin-bottom:30px;
+	}
+
+
+#servicos{
+	background-image:url(../images/bg_servicos.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:100%;
+	height:909px;
+	}
+
+#conteudo_servicos{
+	margin:0 auto;
+	margin-top:200px;
+	width:965px;
+	overflow:hidden;
+	}
+
+.img_como{
+	margin-bottom:50px;
+	margin-top:50px;
+	}
+
+
+#conteudo_servicos ul li{
+	margin-top:10px;
+	margin-bottom:10px;
+	height:28px;
+	width:750px;
+	background-image:url(../images/bg_li.png);
+	background-position:center top;
+	background-repeat:repeat-x;
+	line-height:30px;
+	font-size:16px;
+	color:#c80006;
+	overflow:hidden;
+	}
+
+#conteudo_servicos ul li img{
+	margin-left:10px;
+	margin-right:30px;
+	}
+
+#clientes{
+	background-image:url(../images/bg_clientes.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:100%;
+	height:898px;
+	}
+
+.img_quem{
+	margin-top:20px;
+	}
+
+#conteudo_clientes{
+	margin:0 auto;
+	margin-top:200px;
+	width:965px;
+	overflow:hidden;
+	}
+
+#portifolio{
+	background-image:url(../images/bg_portifolio.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:100%;
+	height:1296px;
+	}
+
+#contato{
+	background-image:url(../images/bg_contato.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:100%;
+	height:1158px;
+	}
+
+#new_contact{
+	margin:0 auto;
+	margin-top:250px;
+	width:965px;
+	overflow:hidden;
+	}
+
+#new_contact input{
+	background-image:url(../images/bg_input.png);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-color:transparent !important;
+	border:none !important;
+	width:449px;
+	height:39px;
+	margin-bottom:20px;
+	padding-left:45px;
+	font-size:20px;
+	color:#999;
+	line-height:40px;
+	}
+
+#new_contact textarea{
+	background-image:url(../images/bg_textarea.png);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-color:transparent !important;
+	border:none !important;
+	resize:none;
+	overflow:hidden;
+	width:449px;
+	height:257px;
+	margin-bottom:20px;
+	padding-left:45px;
+	font-size:20px;
+	color:#999;
+	line-height:40px;
+	font-family:Verdana, Geneva, sans-serif;
+	}
+	
+.bt_enviar{
+	width:183px !important;
+	height:39px !important;
+	background:transparent !important;
+	margin-left:270px !important;
+}
+
+.nav{
+	background-image:url(../images/bg_nav.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:127px;
+	height:31px;
+	}
+
+
+.nav li a{
+	float:left;
+	background-image:url(../images/bt_nav_off.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:22px;
+	height:22px;
+	}

@@ -19,7 +19,23 @@ KwAdministrador::Application.routes.draw do
   }
   #Final do namespace Admin
   
-  root :to => "contacts#index"
+  #NOVAS ROTAS
+  resources :homenew
+  resources :portfolio do
+    collection do
+      get 'adriane'
+      get 'aquaclor'
+      get 'castelatto'
+      get 'fasterm'
+      get 'ffa'
+      get 'nautilus'
+      get 'tegula'
+      get 'unilever'
+      get 'wellnessfit'
+    end
+  end
+  
+  root :to => "homenew#index"
   match 'cadastro' => "users#new"
   match 'login' => 'user_sessions#new'  
   match 'logout' => 'user_sessions#destroy'  

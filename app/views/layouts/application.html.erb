@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "html5" %>
+<%= javascript_include_tag "clientes" %>
+<%= javascript_include_tag "portifolio" %>
+<%= javascript_include_tag "querystring-0.9.0-min" %>
+<%=javascript_include_tag "jquery.validate.min.js"%>
+<%=javascript_include_tag "meusmetodos.js"%>
+<%=javascript_include_tag "jquery.meio.mask.js"%>
+
+<%= stylesheet_link_tag "geral"%>
+<%=yield :head%>
+<%= stylesheet_link_tag "reset"%>
+
+
+
+
+<script>
+function selecionado(obj)
+{
+	$('#ulmenu > li > a').removeClass('selecionado');
+	$(obj).addClass('selecionado');
+};
+
+$(document).ready(function(){	
+	
+	var vai = $.QueryString("anchor"),  
+        vai = ( !vai )? "null":vai
+		
+	if($.QueryString("anchor") != null)
+	{
+		$('html,body').animate({scrollTop: $("#"+ vai +"").offset().top}, 500);
+		selecionado(this);
+	}
+	
+	$('.home').click(function(){
+		$('html,body').animate({scrollTop: $('#home').offset().top}, 500);
+		selecionado(this);
+		});
+	
+	$('.agencia').click(function(){
+		$('html,body').animate({scrollTop: $('#agencia').offset().top}, 500);
+		selecionado(this);
+		});
+		
+	$('.servicos').click(function(){
+		$('html,body').animate({scrollTop: $('#servicos').offset().top}, 500);
+		selecionado(this);
+		});
+	
+	$('.clientes').click(function(){
+		$('html,body').animate({scrollTop: $('#clientes').offset().top}, 500);
+		selecionado(this);
+		});
+	
+	$('.portifolio').click(function(){
+		$('html,body').animate({scrollTop: $('#portifolio').offset().top}, 500);
+		selecionado(this);
+		});
+	
+	$('.contato').click(function(){
+		$('html,body').animate({scrollTop: $('#contato').offset().top}, 500);
+		selecionado(this);
+		});
+		
+});
+
+function check_text_onfocus(obj)
+{
+    if(obj.value == obj.defaultValue)
+        obj.value = '';
+}
+function check_text_onblur(obj)
+{
+    if(obj.value=='')
+        obj.value = obj.defaultValue;
+}
+function insertingmask()
+{
+	$('input[name="contact[phone]"]').setMask('(99)9999-9999');		
+}
+
+function valida(){
+	//jQuery("#Box_registration").hide();
+	//jQuery("#imgload").show();
+	if ($("#new_contact").validate({
+        rules: {
+            "contact[name]": {
+                required: true,
+                minlength: 2,
+				diferenteDe: "Nome"
+            },
+			"contact[phone]": {
+                required: true,
+                minlength: 13,
+				diferenteDe: "Telefone"
+            },
+			"contact[email]": {
+                required: true,
+                email: true
+            },
+			"contact[message]":{
+				required:true,
+				diferenteDe: "Mensagem"
+			}
+
+        },
+        messages: {
+            "contact[name]":{
+				required: "*",
+				minlength: 	"*"
+			},
+			"contact[phone]":{
+				required: "*",
+				minlength: 	"*"
+			},
+			"contact[email]":{
+				required: "*",
+				email: "*"	
+			},
+			"contact[message]":{
+				required: "*"	
+			}
+        }
+    }).form()){
+		$("#new_contact").submit();
+	}else{
+		//jQuery("#imgload").hide();
+		//jQuery("#Box_registration").show();
+	}
+}
+
+</script>
+<title>SATO7 - Comunicação Estratégica</title>
+</head>
+<body>
+<section>
+	<header>
+    	<%=render :file => "/layouts/_header.html.erb"%>
+    </header>
+    
+	<%=yield%>
+</section>
+</body>
+</html>

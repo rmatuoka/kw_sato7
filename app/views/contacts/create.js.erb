@@ -1,17 +1,10 @@
 <%if @erro%>
-	erro = "";
-	erro += "<%= escape_javascript(raw("Nome "+ @contact.errors[:name].to_s + " <br/ >")) if !@contact.errors[:name].to_s.blank?%>";
-	erro += "<%= escape_javascript(raw("Telefone " + @contact.errors[:phone].to_s + "<br/ >")) if !@contact.errors[:phone].empty?%> ";
-	erro += "<%= escape_javascript(raw("Email "+ @contact.errors[:email].to_s + " <br/ >")) if !@contact.errors[:email].to_s.blank?%>";
-	erro += "<%= escape_javascript(raw("Mensagem " + @contact.errors[:message].to_s + "<br/ >")) if !@contact.errors[:message].empty?%> ";
-	alert(erro);
+	alert("Todos os campos são obrigatórios!");
 <%else%>
-	cadok = "";
-	cadok += '<div id="Box_success">';
-	cadok += '<p>Seu e-mail foi enviado</p><br />';
-	cadok += '<p>com sucesso!</p>';
-	cadok += '</div>';
-	jQuery('#Box_registration').html(cadok);
-	jQuery("#imgload").hide();
-	jQuery("#Box_registration").show();	
+	alert("Seu e-mail foi enviado com sucesso! Obrigado!");
+	
+	$("#contact_name").html("Nome");
+	$("#contact_phone").html("Telefone");
+	$("#contact_email").html("E-mail");
+	$("#contact_message").html("Mensagem");
 <%end%>
