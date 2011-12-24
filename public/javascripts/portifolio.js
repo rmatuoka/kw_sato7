@@ -17,7 +17,7 @@ $(document).ready(function() {
 		$('.port3 > img').attr('src','/images/portifolio_gestores_de_informação_col.png');
 		});
 	$('.port3').mouseout(function(){
-		$('.port3 > img').attr('src','/images/portifolio_gestores_de_informação.png');
+		$('.port3 > img').attr('src','/images/portifolio_gestores_de_informacao.png');
 		});
 		
 	$('.port4').mouseover(function(){
