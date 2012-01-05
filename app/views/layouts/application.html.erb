@@ -11,7 +11,8 @@
 <%=javascript_include_tag "jquery.validate.min.js"%>
 <%=javascript_include_tag "meusmetodos.js"%>
 <%=javascript_include_tag "jquery.meio.mask.js"%>
-
+<%=javascript_include_tag "jquery.timers-1.1.2.js"%>
+<%=javascript_include_tag "jquery.cycle.all.js"%>
 <%= stylesheet_link_tag "geral"%>
 <%=yield :head%>
 <%= stylesheet_link_tag "reset"%>
@@ -67,6 +68,38 @@ $(document).ready(function(){
 		selecionado(this);
 		});
 		
+	$('.bg1').click(function(){
+		$('.img1').fadeIn('slow').removeClass('hide');
+		$('.img2').fadeOut('slow').addClass('hide');
+		$('.img3').fadeOut('slow').addClass('hide');
+		$('.img4').fadeOut('slow').addClass('hide');
+		});
+	
+	$('.bg2').click(function(){
+		$('.img2').fadeIn('slow').removeClass('hide');
+		$('.img1').fadeOut('slow').addClass('hide');
+		$('.img3').fadeOut('slow').addClass('hide');
+		$('.img4').fadeOut('slow').addClass('hide');
+		});
+	
+	 $('.bg3').click(function(){
+		$('.img3').fadeIn('slow').removeClass('hide');
+		$('.img1').fadeOut('slow').addClass('hide');
+		$('.img2').fadeOut('slow').addClass('hide');
+		$('.img4').fadeOut('slow').addClass('hide');
+		});
+	
+	$('.bg4').click(function(){
+		$('.img4').fadeIn('slow').removeClass('hide');
+		$('.img1').fadeOut('slow').addClass('hide');
+		$('.img2').fadeOut('slow').addClass('hide');
+		$('.img3').fadeOut('slow').addClass('hide');
+		});
+		
+	$('#home').cycle({
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		pager:  '#nav' 
+	});
 });
 
 function check_text_onfocus(obj)
