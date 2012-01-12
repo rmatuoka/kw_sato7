@@ -48,12 +48,13 @@ header{
 	position:fixed;
 	width:100%;
 	height:150px;
-	padding-left:15%;
+	padding-left:25%;
 	z-index:10000;
 	}
 
 #logo{
 	margin-top:50px;
+	
 	}
 
 #redes{
@@ -135,6 +136,14 @@ header{
 
 #home_imagem4{
 	background-image:url(../images/bg_home_unilever.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:100%;
+	height:880px;
+	}
+
+#home_imagem5{
+	background-image:url(../images/bg_home.jpg);
 	background-position:center top;
 	background-repeat:no-repeat;
 	width:100%;
@@ -317,8 +326,10 @@ header{
 	background-image:url(../images/bg_nav.jpg);
 	background-position:center top;
 	background-repeat:no-repeat;
-	width:127px;
+	width:200px;
 	height:31px;
+	
+	color:transparent !important;
 	}
 
 
@@ -335,7 +346,7 @@ header{
 	display:none;
 	}
 	
-#nav{position:absolute; z-index:10000; top:600px; padding-top:6px; left:15%; background-image:url(../images/bg_nav.jpg); width:127px; height:25px;}
-#nav a { margin: 0 5px; padding: 3px 6px; background-image:url(../images/bt_nav_off.jpg); width:22px; height:23px; color:transparent; }
-#nav a.activeSlide { background-image:url(../images/bt_nav_on.jpg); width:22px; height:23px; }
-#nav a:focus { background-image:url(../images/bt_nav_on.jpg); width:22px; height:23px; }
+#nav{position:absolute; z-index:10000; top:670px; padding-top:6px; left:26%; *left:300px !important; background-image:url(../images/bg_nav.jpg); width:160px; height:25px; color:transparent !important;}
+#nav a { margin: 0 5px; padding: 3px 6px; background-image:url(../images/bt_nav_off.jpg); width:22px; height:23px; color:transparent !important; }
+#nav a.activeSlide { background-image:url(../images/bt_nav_on.jpg); width:22px; height:23px; color:transparent !important; }
+#nav a:focus { background-image:url(../images/bt_nav_on.jpg); width:22px; height:23px; color:transparent !important; }
