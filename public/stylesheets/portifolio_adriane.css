@@ -72,3 +72,18 @@ overflow:hidden;
 #images_portifolio img{
 	margin-bottom:50px;
 	}
+
+#video_adriane{
+	background-image:url('../images/bg_video_adriane.jpg')!important;
+	background-position:top center !important;
+	background-repeat:no-repeat;
+	width:507px;
+	height:472px;
+	margin:0 auto;
+	margin-top:50px;
+	margin-bottom:50px;
+	}
+
+#video_adriane iframe{
+	margin-top:80px;
+	}
