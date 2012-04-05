@@ -74,6 +74,39 @@
 		});
     });
 </script>
+<script>
+$(document).ready(function(){
+
+	// hide #txt_agencia first
+	$("#txt_agencia").hide();
+	
+	// fade in #txt_agencia
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 800) {
+				$('#txt_agencia').fadeIn();
+			} else {
+				$('#txt_agencia').fadeOut();
+			}
+		});
+	});
+
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("#sliding-navigation").hide();
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 1600) {
+				$('#sliding-navigation').fadeIn();
+			} else {
+				$('#sliding-navigation').fadeOut();
+			}
+		});
+	});
+});
+</script>
 <div id='home'>
 	<div id='home_imagem1' class='img1'>
 		
@@ -114,16 +147,16 @@
 	<div id='conteudo_servicos'>
     	<img src="/images/tit_servicos.png" />
         <img class="img_como" src="/images/img_como_fazer.png" />
-        <ul style='margin-left:70px;'>
-        	<li><img src="/images/seta_li.png" />Consultoria, assessoria e planejamento de comunicação;</li>
-            <li><img src="/images/seta_li.png" />Pesquisas e auditorias de opinião e clima organizacional;</li>
-            <li><img src="/images/seta_li.png" />Desenvolvimento de marcas e projetos de identidade visual;</li>
-            <li><img src="/images/seta_li.png" />Projetos gráficos;</li>
-            <li><img src="/images/seta_li.png" />Peças publicitárias em mídia digital e impressa;</li>
-            <li><img src="/images/seta_li.png" />Planejamento e execução de ações e campanhas em mídias sociais;</li>
-            <li><img src="/images/seta_li.png" />Desenvolvimento de sites, hotsites e sistemas  online;</li>
-            <li><img src="/images/seta_li.png" />Integração de sites;</li>
-            <li><img src="/images/seta_li.png" />Planejamento e execução de eventos institucionais, corporativos e promocionais.</li>
+        <ul style='margin-left:70px;' id="sliding-navigation">
+        	<li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Consultoria, assessoria e planejamento de comunicação;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Pesquisas e auditorias de opinião e clima organizacional;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Desenvolvimento de marcas e projetos de identidade visual;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Projetos gráficos;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Peças publicitárias em mídia digital e impressa;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Planejamento e execução de ações e campanhas em mídias sociais;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Desenvolvimento de sites, hotsites e sistemas  online;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Integração de sites;</a></li>
+            <li class="sliding-element"><a href='#'><img src="/images/seta_li.png" />Planejamento e execução de eventos institucionais, corporativos e promocionais.</a></li>
         </ul>
     </div>
 </div>
