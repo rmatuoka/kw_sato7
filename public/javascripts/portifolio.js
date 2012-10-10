@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	$('.port1').mouseover(function(){
-		$('.port1 > img').attr('src','/images/portifolio_segredos_de _adriane_col.png');
+		$('.port1 > img').attr('src','/images/portifolio_segredos_de_adriane_col.png');
 		});
 	$('.port1').mouseout(function(){
-		$('.port1 > img').attr('src','/images/portifolio_segredos_de _adriane.png');
+		$('.port1 > img').attr('src','/images/portifolio_segredos_de_adriane.png');
 		});
 	
 	$('.port2').mouseover(function(){
