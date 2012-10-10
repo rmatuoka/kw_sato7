@@ -352,7 +352,7 @@ header{
 	display:none;
 	}
 	
-#nav{position:absolute; z-index:10000; top:670px; padding-top:6px; left:26%; *left:300px !important; background-image:url(../images/bg_nav.jpg); width:160px; height:25px; color:transparent !important;}
+#nav{position:absolute; z-index:10000; top:670px; padding-top:6px; left:26%; *left:300px !important; background-image:url(../images/bg_nav.jpg); width:130px; height:25px; color:transparent !important;}
 #nav a { margin: 0 5px; padding: 3px 6px; background-image:url(../images/bt_nav_off.jpg); width:22px; height:23px; color:transparent !important; }
 #nav a.activeSlide { background-image:url(../images/bt_nav_on.jpg); width:22px; height:23px; color:transparent !important; }
 #nav a:focus { background-image:url(../images/bt_nav_on.jpg); width:22px; height:23px; color:transparent !important; }
