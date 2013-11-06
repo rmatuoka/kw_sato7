@@ -32,6 +32,9 @@ KwAdministrador::Application.routes.draw do
       get 'tegula'
       get 'unilever'
       get 'wellnessfit'
+      get 'nesporte'
+      get 'clinicasaraiva'
+      get 'putzmeister'   
     end
   end
   

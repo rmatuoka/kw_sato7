@@ -1,0 +1,90 @@
+body{
+	background-image:url('../images/bg_portifolio_geral.jpg')!important;
+	background-position:top center !important;
+	background-repeat:no-repeat;
+	}
+
+#topo_portifolio{
+	background-image:url('../images/img_header_nesporte.png')!important;
+	background-position: center !important;
+	background-repeat:no-repeat;
+	width:100%;
+	height:390px;
+	padding-top:294px;
+	}
+
+#conteudo_portifolio{
+	width:980px;
+	margin:0 auto;
+	margin-top:-30px;
+	}
+
+#texto_portifolio{
+	width:200px;
+	float:left;
+	}
+
+#texto_portifolio h1{
+	color:#FFF;
+	font-size:22px;
+	margin-top:4px;
+	font-family:NovecentoLight;
+	}
+
+#texto_portifolio h2{
+	color:#545454;
+	font-size:18px;
+	margin-top:15px;
+	font-family:NovecentoLight;
+	}
+
+#texto_portifolio h3{
+	color:#ff0000;
+	font-size:14px;
+	margin-top:5px;
+	font-family:NovecentoLight;
+	}
+
+#texto_portifolio h4{
+	color:#000;
+	font-size:16px;
+	margin-top:5px;
+	font-family:NovecentoLight;
+	}
+
+#texto_portifolio p{
+	color:#000;
+	font-size:16px;
+	margin-top:20px;
+	text-align:justify;
+	font-family:AvantGardeBkBTBook;
+	letter-spacing:2px;
+	line-height:20px;
+	}
+
+#images_portifolio{
+overflow:hidden;
+	width:740px;
+	float:right;
+	text-align:center;
+	}
+
+#images_portifolio img{
+	margin-bottom:50px;
+	}
+
+#video_adriane{
+	background-image:url('../images/bg_video_adriane.jpg')!important;
+	background-position:top center !important;
+	background-repeat:no-repeat;
+	width:507px;
+	height:472px;
+	margin:0 auto;
+	margin-top:50px;
+	margin-bottom:50px;
+	}
+	
+
+#video_adriane iframe{
+	margin-top:80px;
+	}
