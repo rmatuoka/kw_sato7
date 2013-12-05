@@ -34,7 +34,8 @@ KwAdministrador::Application.routes.draw do
       get 'wellnessfit'
       get 'nesporte'
       get 'clinicasaraiva'
-      get 'putzmeister'   
+      get 'putzmeister'
+      get 'ceusystem'   
     end
   end
   

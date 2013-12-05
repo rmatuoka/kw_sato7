@@ -1,5 +1,5 @@
 class HomenewController < ApplicationController
-  before_filter :navegadorie6
+  #before_filter :navegadorie6
   
   def index
     @menu = true
